@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import '../App.css'
 
 const Tshirt = ({ item, updateTotalIncome }) => {
   const localStorageKeyStart = `start_${item.id}`;
@@ -22,29 +23,35 @@ const Tshirt = ({ item, updateTotalIncome }) => {
   }, [end, localStorageKeyEnd]);
 
   useEffect(() => {
-    const tincome = (parseInt(start) - parseInt(end)) * item.price;
+    const tincome = (parseInt(start) - parseInt(end)) * item.price >= 0 ? ((parseInt(start) - parseInt(end)) * item.price ) : ( 0 ) ;
     updateTotalIncome(item.id, tincome);
   }, [start, end, item, updateTotalIncome]);
 
   return (
     <div>
-      <span>Typ koszulki: </span> {item.type} <br />
+      <span className="span">Typ koszulki: <strong>{item.type}</strong> </span>  
+      <label>
       Stan początkowy:
       <input
         type="number"
         value={start}
         onChange={(e) => setStart(e.target.value)}
       />
-      <br />
-      <span>Stan końcowy: </span>
+      </label>
+      <label>
+      Stan końcowy:
       <input
         type="number"
         value={end}
         onChange={(e) => setEnd(e.target.value)}
-      /> <br />
-      <span>Cena:</span>
-      {item.price} zł
+      /> 
+      <span className="cena">Cena: {item.price} zł </span>
+
+      </label>              
+      <span>Dochód: {(parseInt(start) - parseInt(end)) * item.price >= 0 ? ((parseInt(start) - parseInt(end)) * item.price ) : ( <span className="alert">UWAGA: błędny zapis!</span>  ) } </span>
+      <hr />
     </div>
+    
   );
 };
 

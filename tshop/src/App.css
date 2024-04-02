@@ -1,6 +1,49 @@
 #root {
-  max-width: 1280px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: dimgray;
+}
 
+
+button {
+  padding: 1rem;
+  background-color: cornflowerblue;
+  font-size: 1rem;
+  color: whitesmoke;
+  border: none;
+}
+
+.span {
+display: inline-block;
+width: 14rem;
+color: rgb(38, 40, 41);
+}
+span {
+  font-size: 1.2rem;
+  display: inline-block; 
+}
+.cena {
+  color: rgb(38, 40, 41)
+}
+
+input {
+  font-size: 1rem;
+  width: 4rem;
+  padding: 0.3rem;
+}
+
+label{
+  margin: 0.5rem;
+}
+
+.alert {
+  width: 12rem;
+  color: rgb(57, 29, 219);
+}
+
+@media(max-width:700px){
+  .span, span, label {
+    display: block;
+  }
 }

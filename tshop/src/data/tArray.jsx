@@ -1,14 +1,6 @@
 
 export const tArray = [
-{ 
-    id: 1,
-    type: "M-XXL",
-    price: 60, 
-    start: '',
-    end: '',
-    income: ''
 
-}, 
 { 
     id: 2,
     type: "Men-XXL",
@@ -16,8 +8,6 @@ export const tArray = [
     start: '',
     end: '',
     income: ''
-
-
 }, 
 { 
     id: 3,
@@ -26,8 +16,6 @@ export const tArray = [
     start: '',
     end: '',
     income: ''
-
-
 }, 
 { 
     id: 4,
@@ -37,6 +25,45 @@ export const tArray = [
     end: '',
     income: ''
 }, 
-
+{ 
+    id: 5,
+    type: "Men-S",
+    price: 60, 
+    start: '',
+    end: '',
+    income: ''
+}, 
+{    
+    id: 6,
+    type: "Women-L",
+    price: 60, 
+    start: '',
+    end: '',
+    income: ''
+},
+{ 
+    id: 7,
+    type: "Women-M",
+    price: 60, 
+    start: '',
+    end: '',
+    income: ''
+},
+{ 
+    id: 8,
+    type: "Women-S",
+    price: 60, 
+    start: '',
+    end: '',
+    income: ''
+},
+{ 
+    id: 9,
+    type: "Women-SX",
+    price: 60, 
+    start: '',
+    end: '',
+    income: ''
+},
 
 ]
