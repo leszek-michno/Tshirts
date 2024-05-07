@@ -27,7 +27,7 @@ export const tArray = [
 }, 
 { 
     id: 5,
-    type: "Men-S",
+    type: "Men-M",
     price: 60, 
     start: '',
     end: '',
